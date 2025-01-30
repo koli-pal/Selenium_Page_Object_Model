@@ -1,5 +1,6 @@
 package com.automation.utilities;
 
+import com.automation.basedriver.BaseDriver;
 import com.automation.basedriver.PageDriver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
@@ -11,7 +12,10 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-public class commonMethods {
+public class commonMethods extends BaseDriver {
+    public void sleep() throws InterruptedException {
+        Thread.sleep(5000);
+    }
     public String getCurrentPageUrl() {
         return PageDriver.getCurrentDriver().getCurrentUrl();
     }
